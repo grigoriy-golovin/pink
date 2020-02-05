@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+		<title>приложение PINK</title>
+	</head>
+<body>
+	<header class="page-header">
+		<a class="page-header__logo">
+			<img class="page-header__logo-image" src="img/logotype-mobile.svg" width="75" height="22" alt="приложение PINK">
+		</a>
+		<nav class="main-nav">
+			<button class="main-nav__toggle">Открыть меню</button>
+			<ul class="main-nav__list site-list">
+				<li class="site-list__item">
+					<a href="index.html">Главная</a>
+				</li>
+				<li class="site-list__item">
+					<a href="#">Фотографии</a>
+				</li>
+				<li class="site-list__item site-list__item--active">
+					<a href="#">Конкурс</a>
+				</li>
+				<li class="site-list__item">
+					<a href="#">HTML Academy</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main class="page-main">
+
+		<h1 class="page-main__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+		<b class="page-main__description">Поделитесь своей историей и получите шанс выиграть ценный приз</b>
+		<form class="page-main__form form" action="https://echo.htmlacademy.ru/courses" method="post">
+			<fieldset class="form__name input-text">
+				<label class="input-text__label">
+					Фамилия:
+					<input class="input-text__field" type="text" name="surname" placeholder="Укажите фамилию *" required>
+				</label>
+				<label class="input-text__label">
+					Имя:
+					<input class="input-text__field" type="text" name="name" placeholder="Введите ваше имя *" required>
+				</label>
+				<label class="input-text__label">
+					Отчество:
+					<input class="input-text__field" type="text" name="patronymic" placeholder="Ну и отчество тоже">
+				</label>
+			</fieldset>
+			<fieldset class="form__achievements achievements-list">
+				<legend class="achievements-list__title">Ваши безбашенные достижения в путешествии</legend>
+				<label class="achievements-list__label">
+					<input class="achievements-list__checkbox" type="checkbox" name="shark">
+					Сделал селфи с акулой
+				</label>
+				<label class="achievements-list__label">
+					<input class="achievements-list__checkbox" type="checkbox" name="sunburn">
+					Обгорел на пляже
+				</label>
+				<label class="achievements-list__label">
+					<input class="achievements-list__checkbox" type="checkbox" name="ChuckNorris">
+					Видел Чака Норриса
+				</label>
+				<label class="achievements-list__label">
+					<input class="achievements-list__checkbox" type="checkbox" name="souvenir">
+					Накупил сувениров
+				</label>
+				<label class="achievements-list__label">
+					<input class="achievements-list__checkbox" type="checkbox" name="tower">
+					Удержал башню
+				</label>
+				<label class="achievements-list__label">
+					<input class="achievements-list__checkbox" type="checkbox" name="hotel">
+					Разгромил отель
+				</label>
+			</fieldset>
+			<fieldset class="form__contacts input-text">
+				<label class="input-text__label">
+					Номер телефона
+					<input class="input-text__field" type="text" name="phone" placeholder="Номер, пожалуйста">
+				</label>
+				<label class="input-text__label">
+					адрес почты
+					<input class="input-text__field" type="email" name="email" placeholder="Введите почту *" required>
+				</label>
+			</fieldset>
+			<fieldset class="form__os what-os">
+				<legend class="what-os__title">С каким приложением путешествовали?</legend>
+				<label class="what-os__label">
+					<input class="what-os__radio" type="radio" name="os" value="iOS">
+					Pink для iOS
+				</label>
+				<label class="what-os__label">
+					<input class="what-os__radio" type="radio" name="os" value="Android">
+					Pink на Android
+				</label>
+				<label class="what-os__label">
+					<input class="what-os__radio" type="radio" name="os" value="Windows">
+					Windows Phone
+				</label>
+			</fieldset>
+			<fieldset class="form__textarea">
+			<label class="input-text__label input-text__label--center">
+				Опишите свои эмоции
+				<textarea class="input-text__field input-text__field--textarea" name="text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+			</label>
+			</fieldset>
+			<input class="form__submit button" type="submit" value="Отправить форму">
+			<b class="form__legend">* — обязательные поля</b>
+		</form>
+	</main>
+	<footer class="page-footer">
+		<img class="page-footer__logo" src="img/logotype-blue-tablet.svg" alt="логотип">
+		<ul class="page-footer__social-list social-list">
+			<li class="social-list__item">
+				<a class="social-list__link social-list__link--twitter" href="#">твитер</a>
+			</li>
+			<li class="social-list__item">
+				<a class="social-list__link social-list__link--fasebook" href="#">фейсбук</a>
+			</li>
+			<li class="social-list__item">
+				<a class="social-list__link social-list__link--youtube" href="#">ютуб</a>
+			</li>
+		</ul>
+		<a class="page-footer__developer" href="https://htmlacademy.ru"></a>
+	</footer>
+	<div class="popup popup--ok">
+		<h2 class="popup__title">Ваша заявка отправлена</h2>
+		<p class="popup__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+		<button class="popup__btn-close button">закрыть окно</button>
+	</div>
+	<div class="popup popup--failure">
+		<h2 class="popup__title">Что-то пошло не так!</h2>
+		<p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+		<button class="popup__btn-close button">OK</button>
+	</div>
+</body>
+</html>
