@@ -74,5 +74,5 @@ gulp.task("server", function () {
   gulp.watch("source/*.html", gulp.series("html", "refresh")).on("change", server.reload);
 });
 
-gulp.task("build", gulp.series("del", "webp", "css", "html", "copy"));
+gulp.task("build", gulp.series("del", "css", "html", "copy"));  /*"webp",*/
 gulp.task("start", gulp.series("build", "server"));

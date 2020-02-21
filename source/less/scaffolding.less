@@ -1,0 +1,31 @@
+body {
+  min-width: @mobile-width;
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "OpenSans", sans-serif;
+  color: @bg-text-blue;
+  font-style: normal;
+
+  background-color: @bg-lightwhite;
+}
+
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
