@@ -13,6 +13,9 @@ body {
 .page-header__flex {
 	display: flex;
   flex-direction: column;
+  width: auto;
+  padding: 0;
+  margin: 0 auto;
 }
 
 .page-header__container {
@@ -27,12 +30,108 @@ body {
   margin-right: auto;
 }
 
-.page-header__toggle-nav{
-	margin-right: 20px;
-	width: 30px;
-	height: 30px;
+.page-header__logo-image {
+  width: 75px;
+  height: 22px;
 }
 
+.page-header__toggle-nav{
+	margin-right: 20px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  position: relative;
+}
+
+.page-header--open-nav .page-header__toggle-nav {
+  width: 25px;
+  height: 25px;
+
+  &::before,
+  &::after{
+    content: " ";
+    position: absolute;
+    top: 11px;
+    right: 0;
+    width: 26px;
+    height: 3px;
+    background-color: white;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: #d22856;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color:  #d22856;
+    opacity: 0.3;
+  }
+
+}
+
+.page-header--closed-nav {
+  opacity: 0.7;
+}
+
+.page-header--closed-nav .page-header__container {
+  border: none;
+}
+
+.page-header--closed-nav .page-header__nav {
+  display: none;
+}
+
+.page-header--closed-nav .page-header__toggle-nav {
+  width: 50px;
+  height: 25px;
+
+  &::before,
+  &::after{
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 5px;
+    background-color: white;
+
+    box-shadow: 0 10px 0 0 white, 0 20px 0 0 white;
+  }
+
+    &:hover::before,
+  &:hover::after {
+    background-color: #d22856;
+    box-shadow: 0 10px 0 0 #d22856, 0 20px 0 0 #d22856;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: #d22856bb;
+    box-shadow: 0 10px 0 0 #d22856bb, 0 20px 0 0 #d22856bb;
+  }
+}
+
+.page-header--no-js {
+  opacity: 1;
+}
+
+.page-header--no-js .page-header__nav {
+  display: block;
+}
+
+.page-header--no-js .page-header__toggle-nav {
+  display: none;
+}
 
 
 @media (min-width: @tablet-width) {
@@ -40,6 +139,21 @@ body {
   	bottom: -110px;
   	min-height: 110px;
   }
+  .page-header__flex {
+    width: auto;
+    padding: 0 ;
+  }
+
+  .page-header__logo {
+  margin-left: 40px;
+
+  }
+
+  .page-header__logo-image {
+    width: 147px;
+    height: 40px;
+  }
+
 
   body {
     top: -110px;
@@ -47,6 +161,10 @@ body {
 
   .page-header__container {
     min-height: 110px;
+  }
+
+  .page-header__toggle-nav{
+  margin-right: 40px;
   }
 }
 
@@ -58,14 +176,24 @@ body {
 
    .page-header__flex {
    	flex-direction: row;
+    justify-content: space-between;
+    width: 900px;
+    padding: 0 150px;
    }
 
   .page-header__toggle-nav{
    display: none;
   }
 
+  .page-header--closed-nav .page-header__nav {
+  display: block;
+}
+
   .page-header__container {
   border-bottom: none;
   }
-}
 
+  .page-header__logo {
+  margin-left: 0;
+  }
+}

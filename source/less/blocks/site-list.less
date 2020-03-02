@@ -19,24 +19,24 @@
   padding: 22px;
   text-align: center;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 
-@media (min-width: 660px) {
 
-}
-
-@media (min-width: 1200px) {
+@media (min-width: @desktop-width) {
   .site-list {
 	  display: flex;
 	  align-items: center;
   }
   .site-list__item a {
-  	padding: 43px;
-  	font-size: 18px;
+  	padding: 37px;
+    font-weight: normal;
+    text-transform: unset;
+    opacity: 1;
   }
 
   .site-list__item {
 	border-bottom: none;
-}
+  }
 }

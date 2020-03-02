@@ -1,22 +1,24 @@
 body {
 
- min-width: 320px;
+ min-width: @mobile-width;
 }
 
 .container {
 	width: 280px;
-	padding: 0 20px;
+	padding: 0;
 	margin: 0 auto;
 }
 
-@media (min-width: 660px) {
+
+
+@media (min-width: @tablet-width) {
 	.container {
 		width: 620px;
 		padding: 0 20px;
 	}
 }
 
-@media (min-width: 1200px) {
+@media (min-width: @desktop-width) {
 	.container {
 		width: 900px;
 		padding: 0 150px;
