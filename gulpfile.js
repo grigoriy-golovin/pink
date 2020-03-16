@@ -68,10 +68,11 @@ gulp.task("server", function () {
     ui: false
   });
 
-  gulp.watch("source/less/**/*.{scss,less}", gulp.series("css", "refresh"));
+  gulp.watch("source/less/**/*.less", gulp.series("css", "refresh"));
   gulp.watch("source/img/*.{png,jpg}", gulp.series("webp", "refresh"));
-  gulp.watch("source/img/*.svg", gulp.series("refresh"));
-  gulp.watch("source/*.html", gulp.series("html", "refresh")).on("change", server.reload);
+  gulp.watch("source/img/*.svg", gulp.series( "refresh"));
+  gulp.watch("source/*.html", gulp.series("html", "refresh"))
+  .on("change", server.reload);
 });
 
 gulp.task("build", gulp.series("del", "css", "html", "copy"));  /*"webp",*/

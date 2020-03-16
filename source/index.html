@@ -7,21 +7,23 @@
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
 <body>
-	<svg class="sprite">
-		<symbol id="logotype-blue"  >
-
-		</symbol>
-	</svg>
 
 	<header class="page-header page-header--closed-nav page-header--no-js">
 		<div class="page-header__flex">
 		<div class="page-header__container">
-			<a class="page-header__logo">
-				<picture>
-					<source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
-					<source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-					<img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="приложение PINK">
-				</picture>
+			<a class="page-header__logo" aria-label="переход на главную страницу">
+				<svg class="page-header__logo-image page-header__logo-image--mobile" role="img">
+					<title>логотип pink</title>
+					<use xlink:href="img/my-sprite.svg#logo-mobile" width="75px" height="22px"></use>
+				</svg>
+				<svg class="page-header__logo-image page-header__logo-image--tablet" role="img">
+					<title>логотип pink</title>
+					<use xlink:href="img/my-sprite.svg#logo-tablet" width="147px" height="40px"></use>
+				</svg>
+				<svg class="page-header__logo-image page-header__logo-image--desktop" role="img">
+					<title>логотип pink</title>
+					<use xlink:href="img/my-sprite.svg#logo-desktop" width="147px" height="40px"></use>
+				</svg>
 			</a>
 			<button class="page-header__toggle-nav">
 				<span class="visually-hidden">Открыть меню</span>
@@ -46,6 +48,7 @@
 		</nav>
 		</div>
 	</header>
+
 	<main class="page-main">
 		<h1 class="visually-hidden">приложение PINK</h1>
 
@@ -237,7 +240,7 @@
 				</div>
 				<div class="contacts__item">
 					<h3 class="contacts__item-titel">Пишите:</h3>
-					<a class="contacts__item-text" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+					<a class="contacts__item-text contacts__item-text--mail" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
 				</div>
 				<div class="contacts__item">
 					<h3 class="contacts__item-titel">Приезжайте в гости:</h3>
@@ -252,11 +255,19 @@
 	</main>
 	<footer class="page-footer page-footer--index">
 		<div class="page-footer__wrapper">
-			<a class="page-footer__logo">
-				<picture>
-					<source media="(min-width: 1200px)" srcset="./img/logo-pink-blue-desktop.svg" >
-					<img class="page-footer__logo-image" src="./img/logo-pink-blue-mobile.svg" alt="логотип">
-				</picture>
+			<a class="page-footer__logo" aria-label="переход на главную страницу">
+				<svg class="page-footer__logo-image page-footer__logo-image--mobile" role="img">
+					<title>логотип pink</title>
+					<use xlink:href="img/my-sprite.svg#logo-mobile" width="75px" height="22px"></use>
+				</svg>
+				<svg class="page-footer__logo-image page-footer__logo-image--tablet" role="img">
+					<title>логотип pink</title>
+					<use xlink:href="img/my-sprite.svg#logo-tablet" width="147px" height="40px"></use>
+				</svg>
+				<svg class="page-footer__logo-image page-footer__logo-image--desktop" role="img">
+					<title>логотип pink</title>
+					<use xlink:href="img/my-sprite.svg#logo-desktop" width="147px" height="40px"></use>
+				</svg>
 			</a>
 			<ul class="page-footer__social-list social-list">
 				<li class="social-list__item">
@@ -275,9 +286,13 @@
 					</a>
 				</li>
 			</ul>
-			<div class="page-footer__dev-wrapper">
-				<a class="page-footer__developer" href="https://htmlacademy.ru">Разработано</a>
-			</div>
+				<a class="page-footer__developer" href="https://htmlacademy.ru">
+					<span class="page-footer__dev-text">Разработано</span>
+					<svg class="page-footer__dev-img" role="img"  width="27px" height="34px">
+						<title>логотип академии</title>
+						<use xlink:href="img/my-sprite.svg#logo-htmlacademy"></use>
+					</svg>
+				</a>
 		</div>
 	</footer>
 	<script type="text/javascript">
