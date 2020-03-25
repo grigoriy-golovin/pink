@@ -62,11 +62,55 @@
 
 @media (min-width: @tablet-width) {
 
-	.form__name {
-		width: 620px;
-		margin-bottom: 3px;
+	.form {
+		margin-bottom: 47px;
 	}
 
+	.form__name {
+		margin-bottom: 0px;
+		order: 1;
+	}
+
+	.form__os {
+		order: 2;
+		margin: 0 auto;
+		margin-bottom: 50px;
+	}
+
+	.form__contacts {
+		order: 3;
+		margin: 0 auto;
+		margin-bottom: 50px;
+	}
+
+	.form__achievements {
+		order: 4;
+		margin: 0 auto;
+		margin-bottom: 65px;
+	}
+
+	.form__textarea {
+		order: 5;
+		margin: 0 auto;
+		margin-bottom: 50px;
+	}
+
+	.form__footer {
+		order: 6;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 620px;
+		align-items: center;
+	}
+
+	.form__submit {
+		width: 300px;
+		margin: 0;
+	}
+
+	.form__legend {
+		margin: 0;
+	}
 }
 
 @media (min-width: @desktop-width) {

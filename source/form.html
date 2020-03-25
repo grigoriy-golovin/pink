@@ -99,13 +99,14 @@
 					</li>
 				</ul>
 			</fieldset>
-			<fieldset class="form__contacts input-text">
+			<fieldset class="form__contacts input-text input-text--contacts">
+				<legend class="input-text__title">Контактная информация</legend>
 				<ul class="input-text__list">
-					<li class="input-text__item">
+					<li class="input-text__item input-text__item--phone">
 						<label class="input-text__label" for="phone">Номер телефона</label>
 						<input class="input-text__field" type="text" name="phone" placeholder="Номер, пожалуйста" id="phone">
 					</li>
-					<li class="input-text__item">
+					<li class="input-text__item input-text__item--email">
 						<label class="input-text__label" for="email">адрес почты</label>
 						<input class="input-text__field" type="email" name="email" placeholder="Введите почту *" required id="email">
 					</li>
@@ -128,7 +129,7 @@
 					</li>
 				</ul>
 			</fieldset>
-			<div class="form__textarea input-text__list">
+			<div class="form__textarea input-text__list input-text__list--textarea">
 				<label class="input-text__label input-text__label--center" for="text">Опишите свои эмоции</label>
 				<textarea class="input-text__field input-text__field--textarea" name="text" placeholder="Можно прям в красках, не стесняясь в выражениях" id="text"></textarea>
 			</div>
