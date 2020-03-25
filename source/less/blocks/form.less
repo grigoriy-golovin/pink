@@ -60,6 +60,10 @@
 	align-self: stretch;
 }
 
+.form__legend-desktop {
+	display: none;
+}
+
 @media (min-width: @tablet-width) {
 
 	.form {
@@ -115,8 +119,31 @@
 
 @media (min-width: @desktop-width) {
 
+
 	.form {
 		flex-direction: row;
 		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 940px;
+		margin: 0 auto;
+
+	}
+
+	.form__os {
+		margin: 0;
+		margin-bottom: 52px;
+	}
+
+	.form__name {
+		margin-bottom: 52px;
+	}
+
+	.form__footer {
+		width: 940px;
+		padding: 0;
+	}
+
+	.form__legend-desktop {
+		display: inline;
 	}
 }

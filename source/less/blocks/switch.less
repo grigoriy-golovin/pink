@@ -124,4 +124,32 @@
 
 @media (min-width: @desktop-width) {
 
+	.switch {
+		width: 960px;
+	}
+	.switch__list {
+		width: 820px;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 10px;
+	}
+
+	.switch__item {
+		width: 260px;
+	}
+
+	.switch--round {
+
+		width: 430px;
+
+		& .switch__list {
+			width: auto;
+			flex-direction: column;
+			margin-left: 53px;
+			margin-top: 45px;
+			margin-bottom: 0;
+		}
+	}
+
 }

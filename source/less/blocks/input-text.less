@@ -178,6 +178,45 @@
 
 @media (min-width: @desktop-width) {
 
+	.input-text__list {
+		width: 435px;
+		padding: 0;
+		padding-top: 20px;
+	}
 
+	.input-text__item:last-child {
+		margin-bottom: 0;
+	}
+
+	.input-text--contacts {
+		width: 936px;
+
+		& .input-text__list {
+			flex-direction: row;
+			width: 820px;
+			padding: 0;
+			justify-content: space-between;
+		}
+
+		& .input-text__item {
+			width: 375px;
+			margin-bottom: 15px;
+		}
+	}
+
+	.input-text__list--textarea {
+		width: 960px;
+		margin-bottom: 65px;
+	}
+
+	.input-text__field--textarea {
+		width: 816px;
+		height: 127px;
+		margin-bottom: 45px;
+	}
+
+	.input-text__label--center {
+		margin-top: 13px;
+	}
 
 }
