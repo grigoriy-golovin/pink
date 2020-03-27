@@ -178,9 +178,46 @@
 			</li>
 		</ul>
 
-
-
-
+		<section class="editor">
+			<b class="editor__description">
+				Затмите их всех! <br>
+				Выкладывайте все, что накопилось в телефоне!
+			</b>
+			<div class="editor__wrapper">
+				<picture>
+					<source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg , img/photo-road-desktop@2x.jpg 2x">
+					<source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg , img/photo-road-tablet@2x.jpg 2x">
+ 					<img class="editor__photo" srcset="img/photo-road-mobile@1x.jpg , img/photo-road-mobile@2x.jpg 2x" alt="зимняя дорога" width="280" height="374">
+ 				</picture>
+ 				<ul class="editor__tools">
+ 					<li class="editor__tool editor__tool--crop">
+ 						<svg class="editor__icon" width="47px" height="47px">
+ 							<title>иконка обрезки</title>
+ 							<use xlink:href="img/my-sprite.svg#icon-editor-crop"></use>
+ 						</svg>
+ 						<input class="editor__range" type="range" id="crop" min="1" max="100" step="1" value="80">
+ 					</li>
+ 					<!-- <li class="editor__tool editor__tool--fill">
+ 						<svg class="editor__icon" width="48px" height="43px">
+ 							<title>иконка обрезки</title>
+ 							<use xlink:href="img/my-sprite.svg#icon-editor-fill"></use>
+ 						</svg>
+ 						<input class="editor__range" type="range" id="fill" min="1" max="100" step="1" value="60">
+ 					</li>
+ 					<li class="editor__tool editor__tool--contrast">
+ 						<svg class="editor__icon" width="32px" height="32px">
+ 							<title>иконка обрезки</title>
+ 							<use xlink:href="img/my-sprite.svg#icon-editor-contrast"></use>
+ 						</svg>
+ 						<input class="editor__range" type="range" id="contrast" min="1" max="100" step="1" value="40">
+ 					</li> -->
+ 				</ul>
+ 				<div class="editor__buttons">
+ 					<button class="editor__button button">Запостить</button>
+ 					<button class="editor__button button">Отмена</button>
+ 				</div>
+			</div>
+		</section>
 
 	</main>
 	<footer class="page-footer">
@@ -221,6 +258,6 @@
 				</a>
 		</div>
 	</footer>
-
+	<script type="text/javascript" src="js/navMenuScript.js"></script>
 </body>
 </html>
