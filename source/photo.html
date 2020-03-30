@@ -191,30 +191,34 @@
  				</picture>
  				<ul class="editor__tools">
  					<li class="editor__tool editor__tool--crop">
- 						<svg class="editor__icon" width="47px" height="47px">
- 							<title>иконка обрезки</title>
- 							<use xlink:href="img/my-sprite.svg#icon-editor-crop"></use>
- 						</svg>
- 						<input class="editor__range" type="range" id="crop" min="1" max="100" step="1" value="80">
+ 						<label class="editor__icon-wrapper" for="crop">
+	 						<svg class="editor__icon" width="47px" height="47px">
+	 							<title>иконка обрезки</title>
+	 							<use xlink:href="img/my-sprite.svg#icon-editor-crop"></use>
+	 						</svg>
+ 						</label>
+ 						<div class="editor__range-wrapper">
+ 							<input class="editor__range" type="range" id="crop" min="1" max="100" step="1" value="80">
+						</div>
  					</li>
  					<!-- <li class="editor__tool editor__tool--fill">
  						<svg class="editor__icon" width="48px" height="43px">
- 							<title>иконка обрезки</title>
+ 							<title>иконка заливки</title>
  							<use xlink:href="img/my-sprite.svg#icon-editor-fill"></use>
  						</svg>
  						<input class="editor__range" type="range" id="fill" min="1" max="100" step="1" value="60">
  					</li>
  					<li class="editor__tool editor__tool--contrast">
  						<svg class="editor__icon" width="32px" height="32px">
- 							<title>иконка обрезки</title>
+ 							<title>иконка контраста</title>
  							<use xlink:href="img/my-sprite.svg#icon-editor-contrast"></use>
  						</svg>
  						<input class="editor__range" type="range" id="contrast" min="1" max="100" step="1" value="40">
  					</li> -->
  				</ul>
  				<div class="editor__buttons">
- 					<button class="editor__button button">Запостить</button>
- 					<button class="editor__button button">Отмена</button>
+ 					<button class="editor__button button-red">Запостить</button>
+ 					<button class="editor__button button-red">Отмена</button>
  				</div>
 			</div>
 		</section>
@@ -258,6 +262,6 @@
 				</a>
 		</div>
 	</footer>
-	<script type="text/javascript" src="js/navMenuScript.js"></script>
-</body>
+<!-- 	<script type="text/javascript" src="js/navMenuScript.js"></script>
+ --></body>
 </html>
