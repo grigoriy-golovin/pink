@@ -74,7 +74,12 @@
 .post--day-panorama .post__photo{
 	width: 100vw;
 	height: auto;
-	margin-left: calc(-50vw + 140px);
+	margin-left: calc(-50vw + 140px); //140px это половина ширины контейнера-центровщика
+}
+
+// для конпенсации ширины полосы вертикальной прокрутки
+body {
+	overflow-x: hidden;
 }
 
 .post--day-panorama {
@@ -180,5 +185,24 @@
 }
 
 @media (min-width: @desktop-width) {
+
+	.post {
+		margin-bottom: 55px;
+	}
+
+
+	.post--day-panorama {
+
+		margin-bottom: 20px;
+
+		& .post__photo{
+			margin-left: calc(-50vw + 470px);
+		}
+	}
+
+	.post__photo {
+		height: 400px;
+	}
+
 
 }
