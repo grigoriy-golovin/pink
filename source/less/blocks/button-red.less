@@ -1,5 +1,5 @@
 
-.button-red{
+.button-red {
 	appearance: none;
   font: inherit;
 	border: solid 3px white;
@@ -18,7 +18,37 @@
 
   &:active {
     background-color: white;
-    color: #d22856bb;
+    color: #f1becc;
   }
+}
 
+.button-red--upload {
+	border-color: @text-pink;
+	color: @text-pink;
+
+	&:hover {
+		background-color: @text-pink;
+		color: white;
+	}
+
+	&:active {
+		color: #e06989;
+	}
+}
+
+.button-red--cancel {
+	border-color: #dddfe0;
+	color: #dddfe0;
+
+	&:hover {
+	border-color: #b5b9be;
+	color: #b5b9be;
+	background-color: transparent;
+
+	}
+
+	&:active {
+		color: #cbced2;
+		background-color: #b5b9be;
+	}
 }

@@ -79,12 +79,104 @@
 
 .post--day-panorama {
 	order: -1;
+	position: relative;
+
+	&::after {
+		display: block;
+		position: absolute;
+		content: "панорама дня";
+		font-size: 12px;
+		line-height: 24px;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+		vertical-align: middle;
+		top: 0;
+		right: 20px;
+		width: 140px;
+		height: 36px;
+		box-sizing: border-box;
+		background-color: @text-pink;
+		color: white;
+		padding-top: 5px;
+	}
 }
 
 
 
 @media (min-width: @tablet-width) {
 
+	.post {
+		width: 300px;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 20px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.post__photo{
+		height: 300px;
+	}
+
+
+
+	.post__description {
+		flex-grow: 1;
+		padding: 22px 27px;
+		min-height: 155px;
+	}
+
+	.post__like-counter{
+		margin-bottom: 0;
+		margin-top: auto;
+		padding-right: 20px;
+		padding-left: 0;
+
+		&::after {
+			left: auto;
+			right: 6px;
+
+		}
+	}
+
+	.post--day-panorama{
+		width: 100%;
+
+		&::after {
+			top: 57px;
+			right: 0;
+		}
+
+		& .post__description {
+			flex-wrap: wrap;
+			flex-direction: row;
+			margin-bottom: 30px;
+			min-height: auto;
+		}
+
+		& .post__author {
+			order: 1;
+		}
+
+		& .post__text {
+			order: 3;
+			margin: 0;
+		}
+
+		& .post__like-counter {
+			order: 2;
+			margin-left: auto;
+			padding-right: 35px;
+
+
+		}
+
+	}
+
+	.post--day-panorama .post__photo{
+		margin-left: calc(-50vw + 310px);
+	}
 }
 
 @media (min-width: @desktop-width) {
