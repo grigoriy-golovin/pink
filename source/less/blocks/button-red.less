@@ -1,5 +1,6 @@
 
 .button-red {
+	display: block;
 	appearance: none;
   font: inherit;
 	border: solid 3px white;
@@ -7,9 +8,15 @@
   box-sizing: border-box;
   border-radius: 30px;
   background-color: transparent;
+  text-decoration: none;
   color: white;
   font-size: 18px;
   font-weight: bold;
+
+  &:focus {
+  	outline: none;
+		box-shadow: 0 0 0 1px rgb(229, 151, 0);
+  }
 
   &:hover {
     background-color: white;
