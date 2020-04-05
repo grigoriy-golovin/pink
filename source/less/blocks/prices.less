@@ -1,10 +1,10 @@
 .prices {
 	background-color: @bg-darkwhite;
 	background: linear-gradient(175deg,
-	  @bg-lightwhite 0%,
-	  @bg-lightwhite 45px,
-	  @bg-darkwhite  45px,
-	  @bg-darkwhite  100%);
+		@bg-lightwhite 0%,
+		@bg-lightwhite 45px,
+		@bg-darkwhite  45px,
+		@bg-darkwhite  100%);
 	padding-top: 95px;
 	padding-bottom: 45px;
 
@@ -51,25 +51,25 @@
 
 
 .prices__on-off--off {
-  &::before,
-  &::after{
-    content: " ";
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    width: 35px;
-    height: 3px;
-    background-color: #f25b26;
-    border: none;
-  }
+	&::before,
+	&::after{
+		content: " ";
+		position: absolute;
+		top: 30px;
+		right: 20px;
+		width: 35px;
+		height: 3px;
+		background-color: #f25b26;
+		border: none;
+	}
 
-  &::before {
-    transform: rotate(45deg);
-  }
+	&::before {
+		transform: rotate(45deg);
+	}
 
-  &::after {
-    transform: rotate(-45deg);
-  }
+	&::after {
+		transform: rotate(-45deg);
+	}
 }
 
 
@@ -96,31 +96,56 @@
 	margin-top: 45px;
 }
 
+.prices__toggles{
+	display: flex;
+	width: 62px;
+	justify-content: space-between;
+
+}
+
+.prices__toggle{
+	display: block;
+	border: 3px solid transparent;
+	background-clip: content-box;
+	box-sizing: content-box;
+	border-radius: 50%;
+	width: 6px;
+	height: 6px;
+	background-color: #bec2c7;
+	padding:0;
+}
+
+.prices__toggle--active {
+		border: 3px solid #283645;
+		background-color: transparent;
+
+}
+
 .prices__titel--hit {
-  position: relative;
+	position: relative;
 
-  &::before {
-  	position: absolute;
-  	content: " ";
-   	left: -2px;
-  	top: -2px;
-  	background-image: url(../../img/bg-hit.svg);
-  	background-repeat: no-repeat;
-  	width: 74px;
-  	height: 73px;
-  }
+	&::before {
+		position: absolute;
+		content: " ";
+		left: -2px;
+		top: -2px;
+		background-image: url(../../img/bg-hit.svg);
+		background-repeat: no-repeat;
+		width: 74px;
+		height: 73px;
+	}
 
-  &::after {
+	&::after {
 
-  	position: absolute;
-  	content: "хит";
-  	font-size: 14px;
-  	text-transform: uppercase;
-  	transform: rotate(-45deg);
-  	left: 10px;
-  	top: 10px;
-  	font-weight: normal;
-  	}
+		position: absolute;
+		content: "хит";
+		font-size: 14px;
+		text-transform: uppercase;
+		transform: rotate(-45deg);
+		left: 10px;
+		top: 10px;
+		font-weight: normal;
+		}
 }
 
 @media (max-width: 659px) {
@@ -138,6 +163,7 @@
 		height: 282px;
 		width: 836px;
 		transform: translateX( -260px);
+		transition: transform 0.6s ease;
 	}
 
 	.prices__option {
@@ -150,8 +176,37 @@
 		text-transform: uppercase;
 		transform: translateX( 260px);
 		z-index: 2;
+		transition: transform 0.6s ease;
 	}
 }
+
+
+.prices__list--base {
+	transform: translateX(20px);
+
+	& .prices__option {
+		transform: translateX(-20px);
+	}
+}
+
+.prices__list--standard {
+	transform: translateX( -260px);
+
+	& .prices__option {
+		transform: translateX(260px);
+	}
+}
+
+.prices__list--unlimited {
+	transform: translateX(-540px);
+
+	& .prices__option {
+		transform: translateX(540px);
+	}
+}
+
+
+
 
 
 @media (min-width: @tablet-width) {
@@ -160,7 +215,7 @@
 		height: 45px;
 
 		&::before,
-	  &::after{
+		&::after{
 			right: 60px;
 			top: 11px;
 
@@ -212,10 +267,10 @@
 
 	.prices {
 		background: linear-gradient(175deg,
-	  @bg-lightwhite 0%,
-	  @bg-lightwhite 90px,
-	  @bg-darkwhite  90px,
-	  @bg-darkwhite  100%);
+		@bg-lightwhite 0%,
+		@bg-lightwhite 90px,
+		@bg-darkwhite  90px,
+		@bg-darkwhite  100%);
 
 		padding-top: 110px;
 		padding-bottom: 70px;
@@ -227,15 +282,39 @@
 
 	.prices__titel--hit {
 		&::before {
-	  	background-image: url(../../img/bg-hit-tablet.svg);
-	  	width: 61px;
-	  	height: 61px;
-	  }
+			background-image: url(../../img/bg-hit-tablet.svg);
+			width: 61px;
+			height: 61px;
+		}
 
-	  &::after {
-	  	left: 5px;
-	  	top: 5px;
-	  }
+		&::after {
+			left: 5px;
+			top: 5px;
+		}
+	}
+
+	.prices__list--base {
+		transform: none;
+
+		& .prices__option {
+			transform: none;
+		}
+	}
+
+	.prices__list--standard {
+		transform: none;
+
+		& .prices__option {
+			transform: none;
+		}
+	}
+
+	.prices__list--unlimited {
+		transform: none;
+
+		& .prices__option {
+			transform: none;
+		}
 	}
 }
 
@@ -261,7 +340,7 @@
 		height: 59px;
 
 		&::before,
-	  &::after{
+		&::after{
 			right: 100px;
 			top: 20px;
 		}
@@ -281,10 +360,10 @@
 
 	.prices {
 		background: linear-gradient(175deg,
-	  @bg-lightwhite 0%,
-	  @bg-lightwhite 130px,
-	  @bg-darkwhite  130px,
-	  @bg-darkwhite  100%);
+		@bg-lightwhite 0%,
+		@bg-lightwhite 130px,
+		@bg-darkwhite  130px,
+		@bg-darkwhite  100%);
 
 		padding-top: 155px;
 		padding-bottom: 75px;
@@ -292,14 +371,14 @@
 
 	.prices__titel--hit {
 		&::before {
-	  	background-image: url(../../img/bg-hit.svg);
-	  	width: 74px;
-	  	height: 73px;
-	  }
+			background-image: url(../../img/bg-hit.svg);
+			width: 74px;
+			height: 73px;
+		}
 
-	  &::after {
-	  	left: 10px;
-	  	top: 10px;
-	  }
+		&::after {
+			left: 10px;
+			top: 10px;
+		}
 	}
 }

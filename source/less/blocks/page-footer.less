@@ -1,20 +1,26 @@
 .page-footer__logo-image {
 	display: block;
-  width: 75px;
-  height: 22px;
-  fill: rgba(210, 40, 86, 1);
-  color: @bg-text-blue;
+	width: 75px;
+	height: 22px;
+	--color-glasses: @text-pink;
+	--color-glasses-star: @bg-text-blue;
+	--color-text: @bg-text-blue;
+	--color-text-star: @text-pink;
 
-  	&:hover {
-  		color:  rgba(210, 40, 86, 1);
-      fill: rgba(210, 40, 86, 1);
-  	}
+	&:hover {
+		--color-glasses: @text-pink;
+		--color-glasses-star: @text-pink;
+		--color-text: @text-pink;
+		--color-text-star: @text-pink;
+	}
 
-  	&:active {
-		  fill: rgba(210, 40, 86, 1);
-		  color: @bg-text-blue;
-      opacity: 0.3;
-  	}
+	&:active {
+		--color-glasses: @text-pink;
+		--color-glasses-star: @bg-text-blue;
+		--color-text: @bg-text-blue;
+		--color-text-star: @text-pink;
+		opacity: 0.3;
+	}
 }
 
 .page-footer__wrapper {
