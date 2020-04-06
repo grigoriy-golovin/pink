@@ -1,197 +1,186 @@
 .advantagest__question {
-	font-size: 24px;
-	display: block;
-	text-align: center;
-	font-weight: lighter;
+  font-size: 24px;
+  display: block;
+  text-align: center;
+  font-weight: lighter;
 }
 
-
 .advantagest__intro {
-	font-size: 24px;
-	display: block;
-	text-align: center;
-	padding-bottom: 45px;
-	font-weight: lighter;
+  font-size: 24px;
+  display: block;
+  text-align: center;
+  padding-bottom: 45px;
+  font-weight: lighter;
 }
 
 .advantagest__bg {
-	background-color: @bg-darkwhite;
-	background: linear-gradient(175deg,
-		@bg-lightwhite 0%,
-		@bg-lightwhite 90px,
-		@bg-darkwhite  90px,
-		@bg-darkwhite  100%);
-	padding-top: 90px;
+  background-color: @bg-darkwhite;
+  background: linear-gradient(
+    175deg,
+    @bg-lightwhite 0%,
+    @bg-lightwhite 90px,
+    @bg-darkwhite 90px,
+    @bg-darkwhite 100%
+  );
+  padding-top: 90px;
 }
 
 .advantafest__list {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.advantagest__item-heading{
-	text-align: center;
-	font-size: 18px;
-	font-weight: bold;
+.advantagest__item-heading {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .advantagest__item-text {
-	text-align: center;
-	font-size: 14px;
+  text-align: center;
+  font-size: 14px;
 }
 @media (max-width: 659px) {
+  .advantafest__picture {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: 157px;
+    height: 277px;
+    overflow: hidden;
 
-	.advantafest__picture {
-		display: block;
-		margin: 0 auto;
-		position: relative;
-		width: 157px;
-		height: 277px;
-		overflow: hidden;
+    &:nth-child(2),
+    &:nth-child(3) {
+      display: none;
+    }
+  }
 
-		&:nth-child(2),
-		&:nth-child(3){
-			display: none;
-		}
-	}
+  .advantafest__image {
+    position: absolute;
+    display: block;
 
-	.advantafest__image {
-		position: absolute;
-		display: block;
-
-		width: 157px;
-		height: 330px;
-	}
+    width: 157px;
+    height: 330px;
+  }
 }
 
 @media (min-width: @tablet-width) {
+  .advantagest__bg {
+    padding-top: 10px;
+  }
 
-	.advantagest__bg {
+  .advantagest__intro {
+    font-size: 40px;
+    width: 350px;
+    margin: 0 auto;
+  }
 
-		padding-top: 10px;
-	}
+  .advantagest__question {
+    font-size: 40px;
+  }
 
+  .advantagest__flex {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
 
-	.advantagest__intro {
-		font-size: 40px;
-		width: 350px;
-		margin: 0 auto;
-	}
+  .advantafest__list {
+    width: 310px;
+  }
 
-	.advantagest__question {
-		font-size: 40px;
-	}
+  .advantafest__image-list {
+    width: 270px;
+    align-self: flex-start;
+  }
 
-	.advantagest__flex {
-		display: flex;
-		flex-direction: row-reverse;
-		justify-content: space-between;
+  .advantafest__picture {
+    display: block;
 
-	}
+    &:nth-child(1),
+    &:nth-child(2) {
+      display: none;
+    }
+  }
 
-	.advantafest__list{
-		width: 310px;
+  .advantafest__image {
+    display: block;
+    width: 268px;
+    height: 481px;
+  }
 
-	}
+  .advantagest__item-heading {
+    text-align: left;
+  }
 
-	.advantafest__image-list{
-		width: 270px;
-		align-self: flex-start;
-	}
-
-	.advantafest__picture {
-		display: block;
-
-		&:nth-child(1),
-		&:nth-child(2){
-			display: none;
-		}
-	}
-
-
-	.advantafest__image {
-		display: block;
-		width: 268px;
-		height: 481px;
-	}
-
-	.advantagest__item-heading{
-		text-align: left;
-	}
-
-	.advantagest__item-text {
-		text-align: left;
-	}
-
+  .advantagest__item-text {
+    text-align: left;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .advantagest__bg {
+    background: linear-gradient(
+      175deg,
+      @bg-lightwhite 0%,
+      @bg-lightwhite 150px,
+      @bg-darkwhite 150px,
+      @bg-darkwhite 100%
+    );
+    padding-top: 35px;
+  }
 
-	.advantagest__bg {
-		background: linear-gradient(175deg,
-			@bg-lightwhite 0%,
-			@bg-lightwhite 150px,
-			@bg-darkwhite  150px,
-			@bg-darkwhite  100%);
-		padding-top: 35px;
-	}
+  .advantagest__question {
+    font-size: 50px;
+  }
 
-	.advantagest__question {
-		font-size: 50px;
-	}
+  .advantagest__intro {
+    font-size: 50px;
+    width: 450px;
+    margin: 0 auto;
+  }
 
-	.advantagest__intro {
-		font-size: 50px;
-		width: 450px;
-		margin: 0 auto;
-	}
+  .advantagest__flex {
+    flex-direction: column-reverse;
+  }
 
-	.advantagest__flex {
-		flex-direction: column-reverse;
-	}
+  .advantafest__list {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+  }
 
+  .advantafest__item {
+    width: 292px;
+  }
 
+  .advantafest__picture {
+    display: block;
 
+    &:nth-child(1),
+    &:nth-child(2) {
+      display: block;
+    }
+  }
 
-	.advantafest__list {
-		display: flex;
-		justify-content: space-between;
-		width: 900px;
-	}
+  .advantafest__image-list {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+  }
 
-	.advantafest__item {
-		width: 292px;
-	}
+  .advantafest__image {
+    width: 292px;
+    height: 302px;
+    display: block;
+  }
 
-	.advantafest__picture {
-		display: block;
+  .advantagest__item-heading {
+    text-align: center;
+  }
 
-		&:nth-child(1),
-		&:nth-child(2){
-			display: block;
-		}
-	}
-
-	.advantafest__image-list {
-		display: flex;
-		justify-content: space-between;
-		width: 900px;
-	}
-
-	.advantafest__image {
-		width: 292px;
-		height: 302px;
-		display: block;
-	}
-
-	.advantagest__item-heading{
-		text-align: center;
-	}
-
-	.advantagest__item-text {
-		text-align: center;
-	}
-
+  .advantagest__item-text {
+    text-align: center;
+  }
 }
-

@@ -1,73 +1,65 @@
-
-
 /*!
 	* Slider (https://github.com/itchief/how-to/tree/master/slider)
 	* Copyright 2019 Alexander Maltsev
 	* Licensed under MIT (https://github.com/itchief/how-to/blob/master/LICENSE)
 	*/
 
-
-
 /* стили основного контейнера слайдера */
 .slider {
-	position: relative;
-	overflow: hidden;
-	margin-left: auto;
-	margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* стили для обёртки, в которой заключены слайды */
 .slider__wrapper {
-	position: relative;
-	overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 /* стили для контейнера слайдов */
 .slider__items {
-	display: flex;
-	transition: transform 0.6s ease;
+  display: flex;
+  transition: transform 0.6s ease;
 }
 
 /* стили для слайдов */
 .slider__item {
-	flex: 0 0 100%;
-	max-width: 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
-
-
 .slider__indicators {
-	display: flex;
-	width: 62px;
-	justify-content: space-between;
-	margin: 0 auto;
-	margin-bottom: 40px;
-	padding-left: 0;
+  display: flex;
+  width: 62px;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding-left: 0;
 }
 
 .slider__indicators li {
-	text-indent: -999px;
-	cursor: pointer;
-	display: block;
-	border: 3px solid transparent;
-	background-clip: content-box;
-	box-sizing: content-box;
-	border-radius: 50%;
-	width: 6px;
-	height: 6px;
-	background-color: #bec2c7;
-	padding:0;
+  text-indent: -999px;
+  cursor: pointer;
+  display: block;
+  border: 3px solid transparent;
+  background-clip: content-box;
+  box-sizing: content-box;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #bec2c7;
+  padding: 0;
 }
 
 .slider__indicators li.active {
-	border: 3px solid #283645;
-	background-color: transparent;
+  border: 3px solid #283645;
+  background-color: transparent;
 }
 
-
-
 @media (min-width: @desktop-width) {
-	.slider__indicators {
-		display: none;
-	}
+  .slider__indicators {
+    display: none;
+  }
 }
